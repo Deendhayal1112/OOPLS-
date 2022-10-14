@@ -1,22 +1,27 @@
-#include <iostream>
-#include <string.h>
+#include<iostream>
 using namespace std;
 int main()
 {
-    char str1[20], str2[20];
-    int i, j, len = 0, flag = 0;
-    cout << "Enter the string : ";
-    cin>>str1;
-    len = strlen(str1) - 1;
-    for (i = len, j = 0; i >= 0 ; i--, j++)
-        str2[j] = str1[i];
-    if (strcmp(str1, str2))
-        flag = 1;
-    if(flag == 1)
-        cout << str1 << " is not a palindrome";
-    else
-        cout << str1 << " is a palindrome";
-    
-	
+	int n,num,digit,rev=0;
+	cout<<"emter a . number";
+	cin>>num;
+	n=num;
+	do
+	{
+		digit=num%10;
+		rev=(rev*10)+digit;
+		num=num/10;
+	}
+	while(num!=0);
+	{
+	if(n==rev)
+	{
+		cout<<"palindrome";
+	}
+	else
+	{
+		cout<<"not a palindrome";
+	}
+}
 	return 0;
 }
